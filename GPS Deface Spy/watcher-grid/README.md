@@ -1,73 +1,109 @@
-# Welcome to your Lovable project
+# Website Defacement Detection — Frontend
 
-## Project info
+## Overview
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+The frontend of the Website Defacement Detection System is a web application that helps users monitor websites, view website changes, identify potential defacement incidents, and manage security alerts through a user-friendly dashboard.
 
-## How can I edit this code?
+## Features
 
-There are several ways of editing your application.
+- **Dashboard:** View website monitoring information and security status.
+- **Website Monitoring:** Manage monitored websites and view monitoring results.
+- **Defacement Detection:** Display detected website changes and potential security incidents.
+- **Security Alerts:** View alerts and incident details.
+- **Incident Management:** Review and track reported website modifications.
+- **Reports:** Access monitoring and detection reports.
+- **Authentication:** User login and access to authorized application features.
 
-**Use Lovable**
+## Technology Stack
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+- React.js
+- TypeScript
+- Vite
+- Tailwind CSS
+- HTML5
+- CSS3
+- JavaScript
 
-Changes made via Lovable will be committed automatically to this repo.
+## Project Structure
 
-**Use your preferred IDE**
+```text
+watcher-grid/
+├── public/
+├── src/
+├── index.html
+├── package.json
+├── package-lock.json
+├── tsconfig.json
+├── vite.config.ts
+└── README.md
+```
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+*The actual project structure may differ depending on the files present in the repository.*
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Prerequisites
 
-Follow these steps:
+- Node.js
+- npm
+- A modern web browser
+- The backend API configured and running, if required
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## Installation
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Open a terminal in the `watcher-grid` directory and run:
 
-# Step 3: Install the necessary dependencies.
-npm i
+```bash
+npm install
+```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+## Environment Configuration
+
+Configure the frontend environment variables according to the project's API setup.
+
+For example, if the application uses a Vite API URL variable, configure the appropriate variable in a local `.env` file:
+
+```env
+VITE_API_BASE_URL=http://127.0.0.1:8000
+```
+
+Use the actual API URL and variable name expected by the source code. Do not commit `.env` files or secrets to GitHub.
+
+## Run the Development Server
+
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Open the local URL printed in the terminal, usually:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```text
+http://localhost:5173
+```
 
-**Use GitHub Codespaces**
+## Build for Production
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```bash
+npm run build
+```
 
-## What technologies are used for this project?
+To preview the production build locally, run:
 
-This project is built with:
+```bash
+npm run preview
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Backend Integration
 
-## How can I deploy this project?
+The frontend communicates with the backend API to retrieve website monitoring data, detection results, security alerts, and incident information.
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+Ensure that the backend is running and that API endpoints, authentication settings, and CORS configuration match the frontend implementation.
 
-## Can I connect a custom domain to my Lovable project?
+## Security Best Practices
 
-Yes, you can!
+- Never expose passwords, API keys, access tokens, or other credentials.
+- Keep environment-specific configuration out of version control.
+- Validate API responses and handle errors appropriately.
+- Use authenticated API requests for protected resources.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## Project Purpose
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+This frontend is part of a cybersecurity project designed to help identify unauthorized website modifications and improve website monitoring and incident response.
